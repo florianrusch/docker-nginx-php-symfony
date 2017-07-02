@@ -9,8 +9,8 @@ The intention behind this project is to have a Docker container system which hel
 ### File hierarchie
 
 - `Docker-compose.yml` - Definition of the container system.
-- `.env` - Configurations file for the Docker container system. Has to be created from the `.env-dist` file.
-- `.env-dist` - Defines the env variables which have to be configured in the `.env` file.
+- `.env` - Defines and configures the env variables for the container system. Has to be created from the `.env-dist` file.
+- `.env-dist` - Template file for the `.env` file.
 - `.data/` - Data folder for the MySQL database etc.
 - `logs/` - Logging folder for Nginx and Symfony.
 - `symfony/` - Folder with the source code of the Symfony project.
