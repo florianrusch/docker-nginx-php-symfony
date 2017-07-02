@@ -12,6 +12,7 @@ The intention behind this project is to have a Docker container system which hel
 - `.env` - Defines and configures the env variables for the container system. Has to be created from the `.env-dist` file.
 - `.env-dist` - Template file for the `.env` file.
 - `.data/` - Data folder for the MySQL database etc.
+- `images/` - Folder for the images of the `php` and the `nginx` container.
 - `logs/` - Logging folder for Nginx and Symfony.
 - `symfony/` - Folder with the source code of the Symfony project.
 
