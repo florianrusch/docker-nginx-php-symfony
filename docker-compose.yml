@@ -1,0 +1,44 @@
+version: '2'
+
+services:
+  db:
+    image: mysql
+    volumes:
+      - "./.data/db:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
+  nginx:
+    image: nginx-symfony
+    hostname: ${NGINX_HOSTNAME}
+    links:
+      - php
+    volumes_from:
+      - php
+    volumes:
+      - ./logs/nginx/:/var/log/nginx
+    ports:
+      - ${NGINX_HOST_IP}:80:80 # sudo ifconfig lo0 alias x.x.x.x
+
+  php:
+    image: php-fpm
+    expose:
+      - "9000"
+    links:
+      - db
+    volumes:
+      - ${SYMFONY_APP_PATH}:/usr/share/nginx/html/symfony
+      - ./logs/symfony:/usr/share/nginx/html/symfony/app/logs
+
+  pma:
+    image: phpmyadmin/phpmyadmin
+    hostname: ${PMA_HOSTNAME}
+    ports:
+      - ${PMA_HOST_IP}:80:80 # sudo ifconfig lo0 alias x.x.x.x
+    links:
+      - db
+    environment:
+      PMA_HOST: db
