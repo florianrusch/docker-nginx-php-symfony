@@ -1,6 +1,6 @@
 # 🐳 Docker Compose - nginx-php-symfony
 
-This Docker-Compose repository initialize a Docker container system with `nginx`, `php`, `db` (MySQL) and a `pma` (phpmyadmin) container.
+This Docker-Compose repository initializes a Docker container system with `nginx`, `php`, `db` (MySQL) and a `pma` (phpmyadmin) container.
 
 The intention behind this project is to have a Docker container system which helps me and you to start easily developing a Symfony project.
 
