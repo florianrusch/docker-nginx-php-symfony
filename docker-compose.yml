@@ -12,6 +12,8 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
   nginx:
+    build:
+      context: ./images/nginx-symfony
     image: nginx-symfony
     hostname: ${NGINX_HOSTNAME}
     links:
@@ -24,6 +26,8 @@ services:
       - ${NGINX_HOST_IP}:80:80 # sudo ifconfig lo0 alias x.x.x.x
 
   php:
+    build:
+      context: ./images/php-fpm
     image: php-fpm
     expose:
       - "9000"

@@ -1,0 +1,6 @@
+[submodule "images/nginx-symfony"]
+	path = images/nginx-symfony
+	url = https://github.com/florianrusch/docker-nginx-symfony
+[submodule "images/php-fpm"]
+	path = images/php-fpm
+	url = https://github.com/florianrusch/docker-php-fpm
