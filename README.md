@@ -18,7 +18,7 @@ The intention behind this project is to have a Docker container system which hel
 
 ### New project
 
-There is not much what you have to do. Just copy the three files `Docker-compose.yml`, `.gitignore`, `.env-dist` to your project root. Create an `.env` file from the `.env-dist` and update the constants in their. After that you should register the ip addresses of the Nginx and the phpmyadmin container on your loopback devices.
+There is not much what you have to do. Just copy the three files `Docker-compose.yml`, `.gitignore`, `.env-dist` to your project root. Create an `.env` file from the `.env-dist` and update the constants in them. After that you should register the ip addresses of the Nginx and the phpmyadmin container on your loopback devices.
 
 For MacOS you can run the following command on your terminal (please replace x.x.x.x with the specific ip address):
 ```
