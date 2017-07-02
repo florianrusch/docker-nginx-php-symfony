@@ -1,4 +1,4 @@
-# Docker compose - nginx-php-symfony
+# 🐳 Docker Compose - nginx-php-symfony
 
 This Docker-Compose repository initialize a Docker container system with `nginx`, `php`, `db` (MySQL) and a `pma` (phpmyadmin) container.
 
@@ -29,3 +29,12 @@ sudo ifconfig lo0 alias x.x.x.x
 ### Existing project
 
 If you have an existing project you need to put your Symfony code into a separated folder called `symfony`. (See [File hierarchie](#file-hierarchie))
+
+
+# Thank you! 👏
+
+There were a view projects/people which I like to say thank you for their work:
+
+- [maxpou](https://github.com/maxpou) with his [docker-symfony repo](https://github.com/maxpou/docker-symfony).
+- [eko](https://github.com/eko) with his [docker-symfony repo](https://github.com/eko/docker-symfony).
+- Chris, a good friend and flatmate.
