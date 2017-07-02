@@ -29,8 +29,6 @@ services:
     build:
       context: ./images/php-fpm
     image: php-fpm
-    expose:
-      - "9000"
     links:
       - db
     volumes:
